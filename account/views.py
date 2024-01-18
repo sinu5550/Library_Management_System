@@ -30,7 +30,7 @@ class UserLoginView(LoginView):
         return super().form_valid(form)
     
     def form_invalid(self, form):
-        messages.success(self.request, 'Logged in information incorrect')
+        messages.error(self.request, 'Logged in information incorrect')
         return super().form_invalid(form)
     
     def get_context_data(self, **kwargs):
